@@ -54,7 +54,42 @@ if desejo.lower() == "s":
         resposta = input("Deseja fazer algum outro pedido? Digite (S/N): ")
         if resposta.lower() != "s":
             print('O valor final da conta é: R${:.2f}'.format(acumulador))
+            print()
+            print("1 - Cartão Debito")
+            print("2 - Cartão Crédito")
+            print("3 - Alimentação")
+            print("4 - Refeição")
+            print("5 - Dinheiro")
+            print("6 - Pix")
+            print()
             forma_pagamento = input("Qual será a forma de pagamento? ")
+
+            if (forma_pagamento == "1"):
+                print(
+                    f"O valor de R${acumulador:.2f} será pago em Débito " .format(acumulador))
+            elif (forma_pagamento == "2"):
+                print(
+                    f"O valor de R${acumulador:.2f} será pago em Crédito " .format(acumulador))
+            elif (forma_pagamento == "3"):
+                print(
+                    f"O valor de R${acumulador:.2f} será pago em Vale Alimentação " .format(acumulador))
+            elif (forma_pagamento == "4"):
+                print(
+                    f"O valor de R${acumulador:.2f} será pago em Vale Refeição " .format(acumulador))
+            elif (forma_pagamento == "5"):
+                print(
+                    f"O valor de R${acumulador:.2f} será pago em Dinheiro " .format(acumulador))
+            elif (forma_pagamento == "6"):
+                print(
+                    f"O valor de R${acumulador:.2f} será pago em Pix " .format(acumulador))
+
+            verifica_pagamento = input("O pagamento foi feito ?")
+
+            if verifica_pagamento.lower() == "s":
+                print("Obrigado e volte sempre!")
+            else:
+                print("Por favor verificar pagamento com o cliente !")
+
             break
 else:
     print("Obrigado e volte sempre!")
